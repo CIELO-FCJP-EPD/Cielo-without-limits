@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CIELO · SVG coloreados</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;padding:32px;background:#eef0f3;color:#152137;font:16px system-ui,sans-serif}main{max-width:1300px;margin:auto}h1{margin-bottom:8px}p{line-height:1.6}nav{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}button{padding:10px 16px;border:1px solid #a1adbb;border-radius:8px;background:white;cursor:pointer;color:#152137}button[aria-pressed=true]{background:#092347;color:white}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}figure{margin:0;background:white;border:1px solid #ccd2da;border-radius:12px;overflow:hidden}.art{height:320px;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--reference)}img{width:100%;height:100%;object-fit:contain}figcaption{padding:16px;overflow-wrap:anywhere}small{display:block;color:#536174;margin-top:6px}body[data-bg=light] .art{background:#fff}body[data-bg=dark] .art{background:#082347}body[data-bg=grid] .art{background:conic-gradient(#aab1bc 25%,#dce0e6 0 50%,#aab1bc 0 75%,#dce0e6 0) 0 0/24px 24px}a{color:#174779}footer{margin-top:24px;color:#536174}
+</style>
+<main>
+<h1>CIELO · SVG coloreados</h1>
+<p>Los ocho archivos tienen fondo transparente. Cambia el fondo para comprobar sus recortes.<br>Las versiones blancas se usan sobre fondos oscuros; las azules, sobre fondos claros.</p>
+<nav aria-label="Fondo de la vista previa">
+<button data-value="reference" aria-pressed="true">Fondo recomendado</button>
+<button data-value="light" aria-pressed="false">Blanco</button>
+<button data-value="dark" aria-pressed="false">Azul marino</button>
+<button data-value="grid" aria-pressed="false">Cuadrícula</button>
+</nav>
+<section aria-label="Logos y mascotas">
+<figure><div class="art" style="--reference:#082347"><img src="../../public/assets/logos/Buho_blanco_FA.svg" alt="Búho blanco"></div><figcaption><a href="../../public/assets/logos/Buho_blanco_FA.svg">Buho_blanco_FA.svg</a><small>Blanco · fondo oscuro</small></figcaption></figure>
+<figure><div class="art" style="--reference:#041a36"><img src="../../public/assets/logos/Buho_cielo_FA.svg" alt="Búho CIELO con círculo"></div><figcaption><a href="../../public/assets/logos/Buho_cielo_FA.svg">Buho_cielo_FA.svg</a><small>Blanco y dorado · fondo oscuro</small></figcaption></figure>
+<figure><div class="art" style="--reference:#082347"><img src="../../public/assets/logos/Logo_Asociacion.svg" alt="Ciencias Jurídicas y Políticas, UNA Puno"></div><figcaption><a href="../../public/assets/logos/Logo_Asociacion.svg">Logo_Asociacion.svg</a><small>Blanco y dorado · fondo oscuro</small></figcaption></figure>
+<figure><div class="art" style="--reference:#082347"><img src="../../public/assets/logos/Logo_Cielo_fA.svg" alt="Emblema CIELO blanco y dorado"></div><figcaption><a href="../../public/assets/logos/Logo_Cielo_fA.svg">Logo_Cielo_fA.svg</a><small>Blanco y dorado · fondo oscuro</small></figcaption></figure>
+<figure><div class="art" style="--reference:#082347"><img src="../../public/assets/logos/Logo_UNA_FA.svg" alt="Escudo UNA Puno blanco y dorado"></div><figcaption><a href="../../public/assets/logos/Logo_UNA_FA.svg">Logo_UNA_FA.svg</a><small>Blanco y dorado · fondo oscuro</small></figcaption></figure>
+<figure><div class="art" style="--reference:#fff"><img src="../../public/assets/logos/Logo_UNA_FB.svg" alt="Escudo UNA Puno azul y dorado"></div><figcaption><a href="../../public/assets/logos/Logo_UNA_FB.svg">Logo_UNA_FB.svg</a><small>Azul y dorado · fondo claro</small></figcaption></figure>
+<figure><div class="art" style="--reference:#fff"><img src="../../public/assets/logos/Logo_cielo_FB.svg" alt="Emblema CIELO azul y dorado"></div><figcaption><a href="../../public/assets/logos/Logo_cielo_FB.svg">Logo_cielo_FB.svg</a><small>Azul y dorado · fondo claro</small></figcaption></figure>
+<figure><div class="art" style="--reference:#082347"><img src="../../public/assets/logos/buho_fondoazul.svg" alt="Búho con gafas doradas"></div><figcaption><a href="../../public/assets/logos/buho_fondoazul.svg">buho_fondoazul.svg</a><small>Blanco y dorado · fondo transparente</small></figcaption></figure>
+</section>
+<footer>Colores aproximados de los JPEG originales. Dorados planos y márgenes ajustados.</footer>
+</main>
+<script>
+document.querySelectorAll('button[data-value]').forEach(button=>button.addEventListener('click',()=>{
+  document.body.dataset.bg=button.dataset.value;
+  document.querySelectorAll('button[data-value]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+}));
+</script>
+</html>

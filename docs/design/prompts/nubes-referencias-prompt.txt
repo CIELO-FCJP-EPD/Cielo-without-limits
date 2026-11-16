@@ -1,0 +1,2 @@
+Tool: built-in Imagegen. References: user-provided beetle photograph and front-facing pibble drawing.
+undefined
